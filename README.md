@@ -2,6 +2,8 @@
 # An interactive food recommendation system using reinforcement learning
 ## paper
 [An interactive food recommendation system using reinforcement learning](https://doi.org/10.1016/j.eswa.2024.124313)
+## data
+[data can be seen in https://www.kaggle.com/datasets/irkaal/foodcom-recipes-and-reviews](https://www.kaggle.com/datasets/irkaal/foodcom-recipes-and-reviews)
 ## framework
 ![ The framework of RecipeRL.](https://github.com/liull2023/RecipeRL/blob/master/framework/MDP.pdf)
 ## run

@@ -1,6 +1,6 @@
 episode_length = 32
 top_k = (1, )
-device = 'cuda:1'
+device = 'cuda:0'
 
 State_compare_flag = [False,False,False, False, False, 
                         False,False,False,False, True, 

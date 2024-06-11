@@ -153,7 +153,6 @@ class DRRAveStateRepresentation(nn.Module):
         Suc = user_embeddings * self.category_embedding(torch.tensor(last_category-1).to(device)).clone().detach()   
         Suc = Suc.unsqueeze(0)
         I = []
-        I = []
         attn_weights = torch.matmul(history_embedding, item_embedding.transpose(0, 1))  # 10, 10
         attn_weights = F.softmax(attn_weights, dim=1)
 
@@ -186,22 +185,6 @@ class DRRAveStateRepresentation(nn.Module):
         return state
         
 
-
-class CFEmbedding(nn.Module):
-    def __init__(self, max_user_id, max_item_id, emb_size, l2_factor):
-        super(CFEmbedding, self).__init__()
-        self.user_embeddings = nn.Embedding(max_user_id, emb_size)
-        self.item_embeddings = nn.Embedding(max_item_id, emb_size)
-        self.item_bias = nn.Embedding(max_item_id, 1)
-        self.l2_factor = l2_factor
-
-    def forward(self, user_ids, item_ids):
-        user_embs = self.user_embeddings(user_ids)
-        item_embs = self.item_embeddings(item_ids)
-        ibias_embs = self.item_bias(item_ids).squeeze()
-        dot_e = user_embs * item_embs
-        ys_pre = torch.sum(dot_e, dim=1) + ibias_embs
-        return ys_pre
 
 
 

@@ -5,7 +5,7 @@
 ## data
 [data can be seen in https://www.kaggle.com/datasets/irkaal/foodcom-recipes-and-reviews](https://www.kaggle.com/datasets/irkaal/foodcom-recipes-and-reviews)
 ## framework
-![ The framework of RecipeRL.](https://github.com/liull2023/RecipeRL/blob/master/framework/MDP.pdf)
+![ The framework of RecipeRL.](https://github.com/liull2023/RecipeRL/blob/master/Recipe.jpg)
 ## run
 python main_stb.py
 ## cite
